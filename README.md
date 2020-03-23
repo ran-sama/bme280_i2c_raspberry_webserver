@@ -14,5 +14,12 @@ python -m SimpleHTTPServer
 ```
 ![alt text](https://raw.githubusercontent.com/ran-sama/bme280_i2c_raspberry_webserver/master/device_photo.jpg)
 
+## Weekly Database example
+```
+rrdtool create climate_data.rrd --step 600 DS:temperature:GAUGE:1800:0:40 DS:humidity:GAUGE:1800:0:100 DS:pressure:GAUGE:1800:800:1200 RRA:MAX:0.5:1:1008
+```
+## Guide to create own databases
+https://apfelboymchen.net/gnu/rrd/create/
+
 ## License
 Licensed under the WTFPL license.
